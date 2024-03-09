@@ -36,8 +36,11 @@ const Hero = () => {
           className="w-16 h-16 rounded-full object-cover mb-6"
         />
         <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-          Software Engineer, App developer, and quick learner.
+          Mozammel Hoshen Chowdhury
         </h1>
+        <h3 className="mt-3 text-2xl tracking-tight text-zinc-800 sm:text-2xl dark:text-zinc-100">
+          Software Engineer
+        </h3>
         <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
           I’m John Doe, a software Engineer and entrepreneur . Lorem ipsum dolor
           sit amet consectetur adipisicing elit. Unde, veniam vel officiis
