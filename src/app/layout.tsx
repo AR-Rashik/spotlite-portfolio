@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Providers>
-          <div className="flex w-full bg-gray-100 dark:bg-black overflow-hidden">
+          <div className="flex w-full bg-gray-100 dark:bg-[#080d17] overflow-hidden">
             <Layout>{children}</Layout>
           </div>
         </Providers>
