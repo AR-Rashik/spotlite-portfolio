@@ -37,15 +37,15 @@ const Role = ({ role }: { role: Role }) => {
       </div>
       <dl className="flex flex-auto flex-wrap gap-x-2">
         <dt className="sr-only">Company</dt>
-        <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
+        <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-primaryDarkText">
           {role.company}
         </dd>
         <dt className="sr-only">Role</dt>
-        <dd className="text-xs text-zinc-500 dark:text-zinc-400">
+        <dd className="text-xs text-zinc-500 dark:text-secondaryDarkText">
           {role.title}
         </dd>
         <dt className="sr-only">Date</dt>
-        <dd className="ml-auto text-xs text-zinc-400 dark:text-zinc-500">
+        <dd className="ml-auto text-xs text-zinc-400 dark:text-tertiaryDarkText">
           <time dateTime={startDate}>{startLabel}</time>{" "}
           <span aria-hidden="true">-</span>
           <time dateTime={endDate}>{endLabel}</time>
@@ -91,7 +91,7 @@ const Resume = () => {
   ];
   return (
     <div className="rounded-2xl border border-zinc-200 p-6 dark:border-zinc-700/40">
-      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-primaryDarkText">
         <FaBriefcase className="text-xl" />
         <span className="ml-3">Work</span>
       </h2>
@@ -100,7 +100,11 @@ const Resume = () => {
           <Role key={roleIndex} role={role} />
         ))}
       </ol>
-      <Button href="#" variant="secondary" className="group mt-6 w-full">
+      <Button
+        href="#"
+        variant="teal"
+        className="group mt-6 w-full bg-teal-500 hover:bg-teal-600 text-primaryDarkText dark:bg-teal-500 hover:dark:bg-teal-60"
+      >
         Download CV
         <BsArrowDown className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>

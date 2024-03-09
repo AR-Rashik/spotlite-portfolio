@@ -24,11 +24,12 @@ const ThemeToggle = () => {
     <button
       type="button"
       aria-label={mounted ? `Switch to ${otherTheme} theme` : "Toggle theme"}
-      className="group rounded-full bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
+      className="group rounded-full bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-secondaryDarkBg dark:ring-white/10 dark:hover:ring-white/20"
       onClick={() => setTheme(otherTheme)}
     >
+      {/* dark:bg-zinc-800/90 */}
       <IoSunnyOutline className="h-6 w-6 stroke-teal-500 transition group-hover:stroke-teal-700 dark:hidden" />
-      <BsMoonStarsFill className="hidden h-6 w-6 fill-zinc-500 stroke-zinc-500 transition dark:block " />
+      <BsMoonStarsFill className="hidden h-6 w-6 fill-zinc-300 stroke-zinc-500 transition dark:block" />
     </button>
   );
 };
@@ -63,7 +64,7 @@ const NavItem = ({
 const DesktopNavigation = (props: React.ComponentPropsWithRef<"nav">) => {
   return (
     <nav {...props}>
-      <ul className="flex rounded-3xl bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
+      <ul className="flex rounded-3xl bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-secondaryDarkBg dark:text-zinc-200 dark:ring-white/10">
         <NavItem href="/about">About</NavItem>
         <NavItem href="/articles">Articles</NavItem>
         <NavItem href="/projects">Projects</NavItem>
@@ -99,7 +100,7 @@ const MobileNavigation = (
 ) => {
   return (
     <Popover {...props}>
-      <Popover.Button className="group flex items-center rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20">
+      <Popover.Button className="group flex items-center rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-secondaryDarkBg dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20">
         Menu
         <FaChevronDown className="ml-3 h-auto w-2 stroke-zinc-50 group-hover:stroke-zinc-700 dark:group-hover:stroke-zinc-400" />
       </Popover.Button>
@@ -130,9 +131,9 @@ const MobileNavigation = (
           >
             <div className="flex flex-row-reverse items-center justify-between">
               <Popover.Button aria-label="Close menu" className="-m-1 p-1">
-                <IoCloseCircleOutline className="h-6 w-6 text-zinc-500 dark:text-zinc-400" />
+                <IoCloseCircleOutline className="h-6 w-6 text-zinc-500 dark:text-secondaryDarkText" />
               </Popover.Button>
-              <h2 className="text-sm font-medium text-zinc-500 dark:text-zinc-400">
+              <h2 className="text-sm font-medium text-zinc-500 dark:text-secondaryDarkText">
                 Navigation
               </h2>
             </div>

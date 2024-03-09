@@ -13,7 +13,7 @@ const Footer = () => {
           <Link href="/uses">Uses</Link>
         </div>
 
-        <p className="text-sm font-extralight text-zinc-500 dark:text-zinc-400">
+        <p className="text-sm font-extralight text-zinc-500 dark:text-secondaryDarkText">
           &copy; {new Date().getFullYear()} {siteConfig.copyright}
         </p>
       </div>
